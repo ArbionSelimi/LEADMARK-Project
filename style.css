@@ -1,5 +1,7 @@
 * {
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -7,9 +9,20 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
+    padding: 0;
     font-family:  'Poppins', sans-serif;
     color: #444;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+}
+
+.content-container-all {
+    width: 100%;
+    overflow: hidden;
+    margin-top: -200px;
 }
 
 
@@ -68,7 +81,7 @@ body {
 
 #header {
     width: 100%;
-    height: 92vh;
+    height: 100vh;
     background-color: rgba(0,0,0,0.7);
 }
 
@@ -96,16 +109,19 @@ body {
     word-spacing: 10px;
 }
 #header .slogan  {
-    color:white;
+    color: white;
     font-size: 100px;
     margin-top: 0%;
+}
 
+.mouse-icon {
+    text-align: center;
+    margin-bottom: -80px;
 }
 
 .svg-container {
     width:100%;
     padding-top: 0;
-    margin-top: -210px;
     margin-bottom: -10px;
 }
 
@@ -159,10 +175,6 @@ padding-top: 90px;
 #service .card p {
     font-size: 14px;
 }
-
-
-
-
 
 #about {
 background-color: #f5f8fc;
@@ -513,7 +525,7 @@ font-size: 14px;
     width: 180px;
     height: 30px;
     color: white;
-    border-bottom: 1px solid white;
+    border-bottom: 2px solid white;
 }
 
 .text-area {
@@ -527,8 +539,19 @@ font-size: 14px;
     width: 100%;
     height: 100px;
     color: white;
-    border-bottom: 1px solid white;
+    border-bottom: 2px solid white;
     resize: vertical;
+}
+
+.table-content input:focus {
+    outline: none;
+    border-bottom: 2px solid #ff6e42 
+}
+
+
+.text-area:focus {
+    outline: none;
+    border-bottom: 2px solid #ff6e42
 }
 
 .inputs-container {
@@ -563,4 +586,30 @@ font-weight: 700;
 .footer a {
     color: #ff6e42;
     text-decoration: none;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid #888;
+        
+    }
+    .contact-container .table-content {
+        padding-top: 20px;
+    }
+    #contact {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+
 }

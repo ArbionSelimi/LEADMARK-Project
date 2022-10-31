@@ -7,58 +7,74 @@
     <title>LeadMark Project</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap");
+  </style>
   <body>
-    <nav>
-      <div class="navlogo">
-        <img src="../LEADMARK Project/assets/imgs/logo.svg" alt="logo" />
+    <nav id="nav">
+      <div class="nav">
+        <span>
+          <img class="navlogo" src="./assets/imgs/logo.svg" alt="logo" />
+        </span>
+        <ul>
+          <li><a href="#service">Our Service</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#articles">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="comp-link"><a href="#">Components</a></li>
+        </ul>
       </div>
-      <ul class="nav">
-        <li>Our Service</li>
-        <li>About Us</li>
-        <li>Portfolio</li>
-        <li>Blog</li>
-        <li>Contact</li>
-        <li>Components</li>
-      </ul>
     </nav>
-    <header class="header">
-      <div class="overlay">
-        <h1 class="tittle">LeadMark Landing Page</h1>
-        <h1 class="slogan">We Are Creative</h1>
+    <header id="header">
+      <div class="innerheader">
+        <div class="overlay">
+          <h1 class="tittle">LeadMark Landing Page</h1>
+          <h1 class="slogan">We Are Creative</h1>
+        </div>
       </div>
     </header>
-
+    <div class="svg-container">
+      <svg viewBox="0 0 1500 200">
+        <path
+          fill="#fff"
+          d="m 0,240 h 1500.4828 v -71.92164 c 0,0 -286.2763,-81.79324 -743.19024,-81.79324 C 300.37862,86.28512 0,168.07836 0,168.07836 Z"
+        ></path>
+      </svg>
+    </div>
     <section id="service">
       <hgroup>
         <h2 class="tittle">Our Service</h2>
         <h2 class="subtittle">Voluptates architecto provident deserunt.</h2>
       </hgroup>
-      <div class="card">
-        <span>01</span>
-        <h4>Beatae quo</h4>
-        <p>
-          Lorem ipsum dolor sit amet, cquasi cupiditate voluptate debitis saepe
-          dolorem totam dolor repudiandae quo nihil, repellendus nesciunt ab
-          fuga quae, minima reprehenderit sequi fugit.
-        </p>
-      </div>
-      <div class="card">
-        <span>02</span>
-        <h4>Delectus Suscipit</h4>
-        <p>
-          Lorem ipsum dolor sit amet, cquasi cupiditate voluptate debitis saepe
-          dolorem totam dolor repudiandae quo nihil, repellendus nesciunt ab
-          fuga quae, minima reprehenderit sequi fugit.
-        </p>
-      </div>
-      <div class="card">
-        <span>03</span>
-        <h4>Itaque harum</h4>
-        <p>
-          Lorem ipsum dolor sit amet, cquasi cupiditate voluptate debitis saepe
-          dolorem totam dolor repudiandae quo nihil, repellendus nesciunt ab
-          fuga quae, minima reprehenderit sequi fugit.
-        </p>
+      <div class="cards-container">
+        <div class="card">
+          <span>01</span>
+          <h4>Beatae quo</h4>
+          <p>
+            Lorem ipsum dolor sit amet, cquasi cupiditate voluptate debitis
+            saepe dolorem totam dolor repudiandae quo nihil, repellendus
+            nesciunt ab fuga quae, minima reprehenderit sequi fugit.
+          </p>
+        </div>
+        <div class="card">
+          <span>02</span>
+          <h4>Delectus Suscipit</h4>
+          <p>
+            Lorem ipsum dolor sit amet, cquasi cupiditate voluptate debitis
+            saepe dolorem totam dolor repudiandae quo nihil, repellendus
+            nesciunt ab fuga quae, minima reprehenderit sequi fugit.
+          </p>
+        </div>
+        <div class="card">
+          <span>03</span>
+          <h4>Itaque harum</h4>
+          <p>
+            Lorem ipsum dolor sit amet, cquasi cupiditate voluptate debitis
+            saepe dolorem totam dolor repudiandae quo nihil, repellendus
+            nesciunt ab fuga quae, minima reprehenderit sequi fugit.
+          </p>
+        </div>
       </div>
     </section>
     <section id="about">
@@ -71,16 +87,18 @@
           architecto alias voluptatibus corrupti corporis earum. Necessitatibus
           maxime modi ipsam, quod!
         </p>
-        <img src="../LEADMARK Project/assets/imgs/about.jpg" alt="about" />
+        <img class="left-image" src="./assets/imgs/about.jpg" alt="about" />
       </div>
       <div class="about-right">
         <div class="about-right-images-ctn">
           <img
-            src="../LEADMARK Project/assets/imgs/about-1.jpg"
+            class="right-image-1"
+            src="./assets/imgs/about-1.jpg"
             alt="about-1"
           />
           <img
-            src="../LEADMARK Project/assets/imgs/about-2.jpg"
+            class="right-image-2"
+            src="./assets/imgs/about-2.jpg"
             alt="about-2"
           />
         </div>
@@ -91,8 +109,10 @@
           Voluptatum.
         </p>
         <p>
-          Aliquid fuga sunt velit, temporibus molestias ab. Ipsa nesciunt totam,
-          aliquid dignissimos.
+          <strong
+            >Aliquid fuga sunt velit, temporibus molestias ab. Ipsa nesciunt
+            totam, aliquid dignissimos.</strong
+          >
         </p>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ut
@@ -108,41 +128,26 @@
       <h2 class="subtittle">New stunning projects for our amazing clients</h2>
       <div class="portfolio-filter">
         <ul>
-          <li>New</li>
-          <li>Advertising</li>
-          <li>Branding</li>
-          <li>Web</li>
+          <li class="portfolio-first"><a href="#">New</a></li>
+          <li><a href="#">Advertising</a></li>
+          <li><a href="#">Branding</a></li>
+          <li><a href="#">Web</a></li>
         </ul>
       </div>
       <div class="portfolio-container">
-        <div class="col-4 menu">
-          <img src="../LEADMARK Project/assets/imgs/web-1.jpg" alt="web-1" />
-          <img
-            src="../LEADMARK Project/assets/imgs/branding-1.jpg"
-            alt="branding-1"
-          />
+        <div class="col-4-menu">
+          <img src="./assets/imgs/web-1.jpg" alt="" />
+          <img src="./assets/imgs/branding-1.jpg" alt="branding-1" />
         </div>
-        <div class="col-8 menu">
-          <img src="../LEADMARK Project/assets/imgs/web-2.jpg" alt="web-2" />
-          <img
-            src="../LEADMARK Project/assets/imgs/advertising-3.jpg"
-            alt="advertising-3"
-          />
-          <img
-            src="../LEADMARK Project/assets/imgs/branding-3.jpg"
-            alt="branding-3"
-          />
+        <div class="col-8-menu">
+          <img src="./assets/imgs/web-2.jpg" alt="web-2" />
+          <img src="./assets/imgs/advertising-3.jpg" alt="advertising-3" />
+          <img src="./assets/imgs/branding-3.jpg" alt="branding-3" />
         </div>
-        <div class="col-12 menu">
-          <img
-            src="../LEADMARK Project/assets/imgs/advertising-2.jpg"
-            alt="advertising-2"
-          />
-          <img src="../LEADMARK Project/assets/imgs/web-3.jpg" alt="web-3" />
-          <img
-            src="../LEADMARK Project/assets/imgs/advertising-4.jpg"
-            alt="advertising-4"
-          />
+        <div class="col-12-menu">
+          <img src="./assets/imgs/advertising-2.jpg" alt="advertising-2" />
+          <img src="./assets/imgs/web-3.jpg" alt="web-3" />
+          <img src="./assets/imgs/advertising-4.jpg" alt="advertising-4" />
         </div>
       </div>
     </section>
@@ -151,23 +156,29 @@
       <h2 class="tittle">Latest Articles</h2>
       <h2 class="subtittle">Architecto provident deserunt eveniet libero</h2>
       <div class="article-container">
-        <div class="col-4">
-          <img src="../LEADMARK Project/assets/imgs/blog-1.jpg" alt="blog-1" />
-          <h5>Pariatur Omnis Harum quae sint.</h5>
-          <p>Fuga quae ratione inventore Perferendis porro.</p>
-          <a href="#">Go To The Article</a>
+        <div class="card">
+          <img src="./assets/imgs/blog-1.jpg" alt="blog-1" />
+          <div class="card-txt">
+            <h5>Pariatur Omnis Harum quae sint.</h5>
+            <p>Fuga quae ratione inventore Perferendis porro.</p>
+            <a href="#">Go To The Article</a>
+          </div>
         </div>
-        <div class="col-4">
-          <img src="../LEADMARK Project/assets/imgs/blog-2.jpg" alt="blog-2" />
-          <h5>Harum Quae Porro</h5>
-          <p>Fuga quae ratione inventore Perferendis porro.</p>
-          <a href="#">Go To The Article</a>
+        <div class="card">
+          <img src="./assets/imgs/blog-2.jpg" alt="blog-2" />
+          <div class="card-txt">
+            <h5>Harum Quae Porro</h5>
+            <p>Fuga quae ratione inventore Perferendis porro.</p>
+            <a href="#">Go To The Article</a>
+          </div>
         </div>
-        <div class="col-4">
-          <img src="../LEADMARK Project/assets/imgs/blog-3.jpg" alt="blog-3" />
-          <h5>Qui optio neque alias</h5>
-          <p>Fuga quae ratione inventore Perferendis porro.</p>
-          <a href="#">Go To The Article</a>
+        <div class="card">
+          <img src="./assets/imgs/blog-3.jpg" alt="blog-3" />
+          <div class="card-txt">
+            <h5>Qui optio neque alias</h5>
+            <p>Fuga quae ratione inventore Perferendis porro.</p>
+            <a href="#">Go To The Article</a>
+          </div>
         </div>
       </div>
     </section>
@@ -175,35 +186,41 @@
     <section id="testmonials">
       <h2 class="tittle">Testmonials</h2>
       <h2 class="subtittle">What Our Clients Says</h2>
-      <div class="testimonials-container">
-        <div class="col-4">
-          <img src="../LEADMARK Project/assets/imgs/avatar.jpg" alt="avatar" />
-          <h5>John Doe</h5>
-          <h6>Business Analyst</h6>
+      <div class="testmonials-container">
+        <div class="card">
+          <div class="card-img">
+            <img src="./assets/imgs/avatar.jpg" alt="avatar" />
+            <div>
+              <h5>John Doe</h5>
+              <h6>Business Analyst</h6>
+            </div>
+          </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
             enim modi, id dicta reiciendis itaque.
           </p>
         </div>
-        <div class="col-4">
-          <img
-            src="../LEADMARK Project/assets/imgs/avatar-1.jpg"
-            alt="avatar-1"
-          />
-          <h5>Maria Garcia</h5>
-          <h6>Insurance Agent</h6>
+        <div class="card">
+          <div class="card-img">
+            <img src="./assets/imgs/avatar-1.jpg" alt="avatar-1" />
+            <div>
+              <h5>Maria Garcia</h5>
+              <h6>Insurance Agent</h6>
+            </div>
+          </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
             enim modi, id dicta reiciendis itaque.
           </p>
         </div>
-        <div class="col-4">
-          <img
-            src="../LEADMARK Project/assets/imgs/avatar-2.jpg"
-            alt="avatar-2"
-          />
-          <h5>Mason Miller</h5>
-          <h6>Residential Appraiser</h6>
+        <div class="card">
+          <div class="card-img">
+            <img src="./assets/imgs/avatar-2.jpg" alt="avatar-2" />
+            <div>
+              <h5>Mason Miller</h5>
+              <h6>Residential Appraiser</h6>
+            </div>
+          </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
             enim modi, id dicta reiciendis itaque.
@@ -212,44 +229,56 @@
       </div>
     </section>
 
-    <section id="contact">
-      <div class="contact">
-        <ul>
-          <li>
-            <div class="text">
-              <span class="label">Phone</span>
-              <span>+ 123-456-7890</span>
+    <footer id="contact">
+      <div class="contact-container">
+        <div class="contact">
+          <ul class="contact-list">
+            <li>
+              <div class="text">
+                <span class="label">Phone</span>
+                <span>+ 123-456-7890</span>
+              </div>
+            </li>
+            <li>
+              <div class="text">
+                <span class="label">Address</span>
+                <span>12345 Fake ST NoWhere AB Country</span>
+              </div>
+            </li>
+            <li>
+              <div class="text">
+                <span class="label">Email</span>
+                <span>info@website.com</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="form">
+          <h2 class="tittle">Drop Us A Line</h2>
+          <form action="#">
+            <div class="table-content">
+              <div class="inputs-container">
+                <input type="text" name="name" placeholder="Name" />
+                <input type="email" name="email" placeholder="Email" />
+                <input type="text" name="subject" placeholder="Subject" />
+              </div>
+              <div>
+                <textarea
+                  class="text-area"
+                  name="message"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+              <button class="table-content-btn" type="submit">Send</button>
             </div>
-          </li>
-          <li>
-            <div class="text">
-              <span class="label">Address</span>
-              <span>12345 Fake ST NoWhere AB Country</span>
-            </div>
-          </li>
-          <li>
-            <div class="text">
-              <span class="label">Email</span>
-              <span>info@website.com</span>
-            </div>
-          </li>
-        </ul>
+          </form>
+        </div>
       </div>
-      <div class="form">
-        <h2 class="tittle">Drip Us A Line</h2>
-        <form action="#">
-          <input type="text" name="name" placeholder="Name" />
-          <input type="email" name="email" placeholder="Email" />
-          <input type="text" name="subject" placeholder="Subject" />
-          <textarea name="message" placeholder="Message"></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </div>
-    </section>
-
-    <footer>
       <div class="footer">
-        <p>© 2022, LeadMark Created By DevCrud. All rights reserved</p>
+        <p>
+          © 2022, LeadMark Created By
+          <a href="https://www.devcrud.com/">DevCrud.</a> All rights reserved
+        </p>
       </div>
     </footer>
   </body>

@@ -604,14 +604,16 @@ input[type="text"] {
   #nav-bar {
     display: none;
     position: absolute;
-    min-width: 160px;
-    margin-top: 193px;
+    width: 100%;
+    margin-top: 292px;
     background-color: rgba(0, 0, 0, 0.6);
     margin-left: -10px;
+    padding-bottom: 10px;
   }
 
   #nav .nav-bar-display {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 
   .nav-icon-mobile {
@@ -625,13 +627,17 @@ input[type="text"] {
     width: 30px;
     height: auto;
   }
-  .nav-btn a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+  .nav li {
+    margin: 5px;
+  }
+  .nav li a {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  #nav-bar .comp-link {
+    margin-left: 150px;
+    margin-right: 140px;
   }
 
   #header .tittle {

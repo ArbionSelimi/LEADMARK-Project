@@ -589,9 +589,10 @@ input[type="text"] {
     height: auto;
   }
 
-  .mobile-container {
-    max-width: 600px;
-    margin: auto;
+  .navlogo {
+    width: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 
   .nav {

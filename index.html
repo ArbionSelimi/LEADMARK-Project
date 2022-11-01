@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <style>
-    @import url("https://css.gg/css?=|mouse");
-
     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap");
     ::-webkit-scrollbar {
       width: 8px;
@@ -29,13 +27,47 @@
       background: #f44814;
     }
   </style>
+  <script>
+    function onNavButtonClick() {
+      var element = document.getElementById("nav-bar");
+      if (element.classList.contains("nav-bar-display")) {
+        element.classList.remove("nav-bar-display");
+      } else {
+        element.classList.add("nav-bar-display");
+      }
+    }
+  </script>
   <body>
     <nav id="nav">
       <div class="nav">
         <span>
           <img class="navlogo" src="./assets/imgs/logo.svg" alt="logo" />
         </span>
-        <ul>
+        <div class="nav-icon-mobile">
+          <button class="dropbtn" onclick="onNavButtonClick()">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="orange"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z"
+                fill="currentColor"
+              />
+              <path
+                d="M2 12.0322C2 11.4799 2.44772 11.0322 3 11.0322H21C21.5523 11.0322 22 11.4799 22 12.0322C22 12.5845 21.5523 13.0322 21 13.0322H3C2.44772 13.0322 2 12.5845 2 12.0322Z"
+                fill="currentColor"
+              />
+              <path
+                d="M3 17.0645C2.44772 17.0645 2 17.5122 2 18.0645C2 18.6167 2.44772 19.0645 3 19.0645H21C21.5523 19.0645 22 18.6167 22 18.0645C22 17.5122 21.5523 17.0645 21 17.0645H3Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
+        <ul id="nav-bar">
           <li><a href="#service">Our Service</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
@@ -164,8 +196,12 @@
       </section>
 
       <section id="portfolio">
-        <h2 class="tittle">Our Portfolio</h2>
-        <h2 class="subtittle">New stunning projects for our amazing clients</h2>
+        <div>
+          <h2 class="tittle">Our Portfolio</h2>
+          <h2 class="subtittle">
+            New stunning projects for our amazing clients
+          </h2>
+        </div>
         <div class="portfolio-filter">
           <ul>
             <li class="portfolio-first"><a href="#">New</a></li>
@@ -302,14 +338,16 @@
                   <input type="email" name="email" placeholder="Email" />
                   <input type="text" name="subject" placeholder="Subject" />
                 </div>
-                <div>
+                <div class="text-area-container">
                   <textarea
                     class="text-area"
                     name="message"
                     placeholder="Message"
                   ></textarea>
                 </div>
-                <button class="table-content-btn" type="submit">Send</button>
+                <div class="table-btn-ctn">
+                  <button class="table-content-btn" type="submit">Send</button>
+                </div>
               </div>
             </form>
           </div>
